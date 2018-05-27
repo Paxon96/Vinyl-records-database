@@ -1,0 +1,8 @@
+<component name="libraryTable">
+  <library name="org.jooq:jooq-codegen-maven:3.6.1" type="repository">
+    <properties maven-id="org.jooq:jooq-codegen-maven:3.6.1" />
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
