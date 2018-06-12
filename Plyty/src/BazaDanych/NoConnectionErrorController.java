@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ErrorController implements Initializable {
+public class NoConnectionErrorController implements Initializable{
 
     @FXML
     private Button errorButton;
@@ -21,23 +21,20 @@ public class ErrorController implements Initializable {
     @FXML
     private Label errorLabel2;
 
-    private String errorMessage = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        errorLabel1.setText("Żeby edytować płytę musisz wybrać ");
-        errorLabel2.setText("pole TYTUŁ oraz WYKONAWCA");
+        errorLabel1.setText("Błąd połączenia z bazą danych");
         errorLabel1.setTextAlignment(TextAlignment.CENTER);
-        errorLabel2.setTextAlignment(TextAlignment.CENTER);
     }
 
+
     public void errorButtonAction(ActionEvent actionEvent) {
-        Node  source = (Node)  actionEvent.getSource();
+
+        Node source = (Node)  actionEvent.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();
         stage.close();
     }
 
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-    }
+
 }

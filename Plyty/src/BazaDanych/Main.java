@@ -11,12 +11,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("search.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 1110, 800));
+        Parent root = FXMLLoader.load(getClass().getResource("scenes/MainScene.fxml"));
+        primaryStage.setTitle("Main");
+        primaryStage.setScene(new Scene(root, 650, 400));
         primaryStage.getIcons().add(new Image("BazaDanych/icons/icon.png"));
-        primaryStage.setMinWidth(1110);
-        primaryStage.setMinHeight(800);
+        primaryStage.setMinWidth(500);
+        primaryStage.setMinHeight(300);
         primaryStage.show();
     }
 

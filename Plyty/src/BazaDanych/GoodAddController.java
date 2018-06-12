@@ -6,14 +6,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ErrorController implements Initializable {
-
+public class GoodAddController implements Initializable {
     @FXML
     private Button errorButton;
     @FXML
@@ -21,23 +19,15 @@ public class ErrorController implements Initializable {
     @FXML
     private Label errorLabel2;
 
-    private String errorMessage = null;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        errorLabel1.setText("Żeby edytować płytę musisz wybrać ");
-        errorLabel2.setText("pole TYTUŁ oraz WYKONAWCA");
-        errorLabel1.setTextAlignment(TextAlignment.CENTER);
-        errorLabel2.setTextAlignment(TextAlignment.CENTER);
+        errorLabel1.setText("Udało się dodać płytę!");
     }
+
 
     public void errorButtonAction(ActionEvent actionEvent) {
-        Node  source = (Node)  actionEvent.getSource();
+        Node source = (Node)  actionEvent.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();
         stage.close();
-    }
-
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
     }
 }
